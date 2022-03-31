@@ -3,11 +3,11 @@
 /* -------- */
 
 /* app layer */
-struct MyData {
-	int timestamp;
+typedef struct _MyData {
+	int id;
 	int data;
-};
-#define MYDATA_NUM (10)
-void my_app_addall(struct MyData *data);
-void my_app_add(struct MyData *data);
-void my_app_getall(struct MyData *data);
+} TMyData;
+#define MYDATA_NUM (5)
+void my_app_addall(TMyData *buf);
+void my_app_add(TMyData *item);
+void my_app_getall(TMyData *buf);

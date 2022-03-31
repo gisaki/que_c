@@ -3,14 +3,15 @@
 
 int main(void)
 {
-	struct MyData data[MYDATA_NUM] = {
+	TMyData data[MYDATA_NUM] = {
 		{3, 1003}, 
 		{4, 1004}, 
 		{5, 1005}, 
+		{6, 1005}, 
 		/* à»ç~ÅA0x00 */
 	};
-	struct MyData data1 = {1, 1001};
-	struct MyData data2 = {2, 1002};
+	TMyData data1 = {1, 1001};
+	TMyData data2 = {2, 1002};
 	int i;
 
 	my_app_addall(data);
@@ -20,7 +21,7 @@ int main(void)
 
 	for (i=0; i<MYDATA_NUM; i++)
 	{
-		printf("data[%d] = %d, %d\n", i, data[i].timestamp, data[i].data); 
+		printf("data[%d] = %d, %d\n", i, data[i].id, data[i].data); 
 	}
 
 	return 0;
